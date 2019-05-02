@@ -12,8 +12,21 @@
     <audio controls autoplay>
       <source src="inception_time.ogg" type="audio/ogg">
       <source src="inception_time.wav" type="audio/mpeg">
-    Your browser does not support the audio element.
     </audio>
+
+    <canvas style="display: none" id = "joeClip" width="450" height="300"></canvas>
+    	<div style="display: none">
+        <video autoplay loop muted playsinline src="joeClip.mp4"></video>
+      <!-- include these video attributes for browser compatibility -->
+        </div>
+
+    <canvas style="display: none" id = "tomClip" width="450" height="300"></canvas>
+      <div style="display: none">
+        <video autoplay loop muted playsinline src="tomClip.mp4"></video>
+      <!-- include these video attributes for browser compatibility -->
+        </div>
+
+
 
     <div id="container" > 
 
@@ -26,9 +39,20 @@
         <img class="letter" id="I-2" src="I-2.png">
         <img class="letter" id="O" src="O.png">
         <img class="letter" id="N-2" src="N-2.png">
+        
+    </div>
 
+    <div class="wrapper">
+      <div id="topheader"></div>
+      <div id="joseph"></div>
+      <div id="tom"></div>
+      <div id="leo"></div>
+      <div id="other"></div>
+     
 
     </div>
+
+    <script src="inception.js"></script>
 
   </body>
 </html>
