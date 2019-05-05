@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Grid Template Areas</title>
+    <style>
+
+    body {
+       padding:0;
+      margin:0;
+      background: url(shutterisland4.jpg);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+
+} 
+     .topheader, .rachel, .tom, .leo, .other {
+        background-color: rgba(0, 255, 0, 0.2);
+        border: 1px solid green;
+        border-radius: 10px;
+      }
+
+      .topheader {
+        grid-area: hd;
+      }
+
+      .rachel {
+        grid-area: ra; 
+      }
+
+      .tom {
+        grid-area: th;
+      }
+
+      .leo {
+        grid-area: ld;
+      }
+
+      .other {
+        grid-area: ot;
+      }
+
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        width: 100%;
+        grid-template-areas: 
+          "hd hd hd hd hd hd hd hd"
+          "hd hd hd hd hd hd hd hd"
+          ". . th ld ld ot ot ot hd"
+          ". . th ld ld ot ot ot hd"
+          ". . th ld ld ot ot ot hd"
+
+          
+        }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="wrapper"></div>
+    <div class="topheader"></div>
+      <div class="middle"></div>
+      <div class="lighthouse"></div>
+      <div class="leo"></div>
+      <div class="other"></div>
+
+     
+    </div>
