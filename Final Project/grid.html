@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Grid Template Areas</title>
+    <style>
+
+    body {
+  background-image: url('inception5.jpg');
+  background-size: cover;
+  display: block;
+} 
+     .header, .joseph, .tom, .leo, .other {
+        background-color: rgba(0, 255, 0, 0.2);
+        border: 1px solid green;
+        border-radius: 10px;
+      }
+
+      .header {
+        grid-area: hd;
+      }
+
+      .joseph {
+        grid-area: jg; 
+      }
+
+      .tom {
+        grid-area: th;
+      }
+
+      .leo {
+        grid-area: ld;
+      }
+
+      .other {
+        grid-area: ot;
+      }
+
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: 
+          "hd hd hd hd hd hd hd hd"
+          "hd hd hd hd hd hd hd hd"
+          ". jg th ld ld ot ot ot"
+          ". jg th ld ld ot ot ot"
+          ". jg th ld ld ot ot ot"
+          ". jg th ld ld ot ot ot"
+          ". jg th ld ld ot ot ot"
+        }
+      
+
+
+      #joeClip {
+    width:100px;
+    height:100px;
+    display:block;
+    position:absolute;
+    background-color: yellow;
+  
+}
+
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="header">header</div>
+      <div class="joseph">joe</div>
+      <div class="tom">tom</div>
+      <div class="leo">leo</div>
+      <div class="other">other</div>
+     
+    </div>
+
+    <div id = "joeClip"> </div>
+
+    <div id="container" > 
+
+        <img class="letter" id="I-1" src="I-1.png" >
+        <img class="letter" id="N-1" src="N-2.png">
+        <img class="letter" id="C" src="C.png">
+        <img class="letter" id="E" src="E.png">
+        <img class="letter" id="P" src="P.png">
+        <img class="letter" id="T" src="T.png">
+        <img class="letter" id="I-2" src="I-2.png">
+        <img class="letter" id="O" src="O.png">
+        <img class="letter" id="N-2" src="N-2.png">
+        
+    </div>
+
+  </body>
+</html>

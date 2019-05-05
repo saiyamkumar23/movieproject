@@ -1,4 +1,10 @@
 
+#header, #joseph, #tom, #leo, #other {
+        /*background-color: rgba(0, 255, 0, 0.2);
+        border: 1px solid green;
+        border-radius: 10px;*/
+       
+ }
 
 body {
 	background-image: url('inception5.jpg');
@@ -6,63 +12,175 @@ body {
 	display: flex;
 }	
 
+.wrapper {
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+
+audio {
+	z-index: 3;
+}
+
+#leo{
+	max-width: 100%;
+    height: auto;
+    width: auto;
+	position:relative;
+}
+
+#joseph{
+	max-width: 100%;
+    height: auto;
+    width: auto;
+	position:relative;
+}
+
+
+#tom{
+	max-width: 100%;
+    height: auto;
+    width: auto;
+	position:relative;
+}
+
+
 #container {
+	text-align: center;
 	align-content: center;
+	position: absolute;
+	width:100%; 
+	pointer-events: none;
+	z-index: 1;
 }
 
 .letter {
-	width: 100px;
+	width: 120px;
+	position:relative;
+	display: inline-block;
+	right:0px;
 	margin-top: 25px;
 }
 
 
 
-#I-1:hover {
+#I-1 {
 	background-position: 0 0;
 	animation-name: fall;
 	animation-duration: 1s;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+
+	
 }
 
-#N-1:hover {
+#N-1 {
 	animation-name: fall;
 	animation-duration: 1s;
+	animation-delay: 1.1s;
+	animation-iteration-count: infinite;
+	
 }
 
-#C:hover {
+#C {
 	animation-name: fall;
 	animation-duration: 1s;
+	animation-delay: 1.2s;
+	animation-iteration-count: infinite;
+
+	
 }
 
-#E:hover {
+#E {
 	animation-name: fall;
 	animation-duration: 1s;
+	animation-delay: 1.3s;
+	animation-iteration-count: infinite;
+	
 }
 
-#P:hover {
+#P {
 	animation-name: fall;
-	animation-duration: 1s;
+	animation-duration:1s;
+	animation-delay: 1.4s;
+	animation-iteration-count: infinite;
+	
 }
 
-#T:hover {
+#T {
 	animation-name: fall;
 	animation-duration: 1s;
+	animation-delay: 1.5s;
+	animation-iteration-count: infinite;
+	
 }
 
-#I-2:hover {
+#I-2 {
 	animation-name: fall;
 	animation-duration: 1s;
+	animation-delay: 1.6s;
+	animation-iteration-count: infinite;
+	
 }
 
-#O:hover {
+#O {
 	animation-name: fall;
 	animation-duration: 1s;
-}
+	animation-delay: 1.7s;
+	animation-iteration-count: infinite;
+	}
 
-#N-2:hover {
+#N-2 {
 	animation-name: fall;
 	animation-duration: 1s;
+	animation-delay: 1.8s;
+	animation-iteration-count: infinite;
+	
 }
 @keyframes fall {
         0% {transform: translate(0px, 0px);}
-        100% {transform: translate(0px, 500px);}
+        100% {transform: translate(0px, 500px);
+        	opacity: 0;
+        }
+ }
+
+/* For grid container  */ 
+      #header {
+        grid-area: hd;
+       
+      }
+
+      #joseph {
+        grid-area: jg; 
+        
+      }
+
+      #tom {
+        grid-area: th;
+        
+      }
+
+      #leo {
+        grid-area: ld;
+       
+      }
+
+      #other {
+        grid-area: ot;
+        
+      }
+
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: 
+          "hd hd hd hd hd hd hd hd"
+          "hd hd hd hd hd hd hd hd"
+          ". jg th ld ld ot ot ot"
+          ". jg th ld ld ot ot ot"
+          ". jg th ld ld ot ot ot"
+          ". jg th ld ld ot ot ot"
+          ". jg th ld ld ot ot ot"
+        }
       }
