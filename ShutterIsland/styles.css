@@ -28,22 +28,10 @@ body
 }
 
 
-.audio {
+audio {
 	z-index: 3;
 }
-/*
-#torch {
-	position: absolute;
-	top:0px;
-	left: 0px;
-	width: 100vw;
-	height: 100vh;
-	background:url(shutterisland4.jpg);
-	background-size: 100% 100%;
-	clip: rect(20px,200px,200px,20px);
 
-}
-*/
 
 
 .rain
@@ -66,7 +54,6 @@ body
 		background: white;
 		animation: lighting 4s linear infinite;
 		opacity:0;
-		z-index: 
 
 	}  
 
