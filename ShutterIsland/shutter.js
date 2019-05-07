@@ -12,10 +12,4 @@ document.addEventListener('mousemove',update)
 document.addEventListener('touchmove',update)
 
 
-// document.body.addEventListener('mousemove', function(e) {
-// 	var top= e.pageY;
-// 	var left= e.pageX;
-// 	var torch= document.getElementById("torch");
-// 	torch.style.clip= "rect("+(top-200)+"px,"+left+"px,"+top+"px,"+(left-200)+"px)";
-// });
 
